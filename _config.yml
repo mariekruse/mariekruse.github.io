@@ -1,0 +1,7 @@
+name: Marei Kruse Photography
+highlighter: pygments
+exclude: [README.md]
+timezone: Europe/Berlin
+url: www.mariekruse.com
+markdown: kramdown
+permalink:  none

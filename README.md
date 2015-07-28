@@ -1,2 +1,2 @@
 # mariekruse.github.io
-Source for Marie Kruse Photogrphy web site
+Source for Marie Kruse Photography web site
