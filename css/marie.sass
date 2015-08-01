@@ -1,0 +1,96 @@
+---
+  # The (empty) YAML front matter is required
+  # in order to have Jekyll process it.
+---
+
+/*
+ This stylesheet is build from SASS
+ You're not supposed to alter anything
+ in this file - since it will be
+ overwritten at each build.
+
+ Go to the source: /css/marie.sass
+
+ */
+
+//variables
+$font-stack-header:    Amatic SC, Raleway, Helvetica, Arial, sans-serif
+$font-stack-body:      Raleway, Helvetica, 'Arial', sans-serif
+$primary-color:        #333
+$font-size-body:       16px
+$font-size-header:     18px
+
+//Mixins
+@import "mixins"
+@import "helpers"
+
+//@import "reset"
+
+//styles
+body
+  font: $font-size-body $font-stack-body
+  color: $primary-color
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+  height: auto
+ 
+p
+  font-size: $font-size-body
+  line-height: normal
+
+h1
+  +header
+  font-size: $font-size-header*1.8
+
+h2
+  +header
+  font-size: $font-size-header*1.2
+
+h3
+  +header
+  font-size: $font-size-header
+
+banner
+  h1
+    margin: 0 0 30px
+    @include text-shadow(0, 1px, 1px, #333)
+
+nav
+  font: normal 400 $font-size-header*0.9 $font-stack-header
+
+  li
+    margin: 0 0 8px
+
+  li.nav-sub2
+    margin: 0 10px 8px
+
+  li a:hover,
+  li.active a
+    border-bottom: 1px dotted #333
+    background: none
+    font-weight: 700
+
+  li.active a
+    cursor: default
+
+/*
+ Overriding flexslider.css
+ */
+
+$box-shadow-blur:    1px
+$box-shadow-spread:  3px
+$box-border:         5px
+
+.flexslider
+  margin: 0px $box-shadow-blur+$box-shadow-spread 60px
+  background: $primary-color
+  border: $box-border solid $primary-color
+  position: relative
+  zoom: 1
+  +border-radius($box-border)
+  +box-shadow(0 0 $box-shadow-blur $box-shadow-spread rgba(0, 0, 0, 0.5))
+
+  li
+    width: 14.2857142857%
+    float: left
+    margin: 0

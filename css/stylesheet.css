@@ -11,7 +11,7 @@ table {border-collapse: collapse; border-spacing: 0;}
 strong {font-weight: bold;}
 em {font-style: italic;}
 
-nav{font: normal 24px Amatic SC, Geogrotesque-semibold, Helvetica, Arial;}
+nav{font: normal 24px Amatic SC, Helvetica, Arial; font-weight: 400;}
 
 /*
  * MyFonts Webfont Build ID 1114443, 2011-09-02T06:08:04-0400 - REGULAR
@@ -65,7 +65,7 @@ nav{font: normal 24px Amatic SC, Geogrotesque-semibold, Helvetica, Arial;}
 body {
 	background: #fff;
 	font-size: 20px;
-	font-family: Helvetica, 'Arial', sans-serif;
+	font-family: Raleway, Helvetica, 'Arial', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	height: auto;
@@ -75,18 +75,23 @@ a {
 	text-decoration: none;
 }
 
-h3 {
+h1, h2, h3 {
 	margin: 0 0 8px;
-	color: #fff;
-	font: normal 24px Amatic SC, Geogrotesque-semibold, Helvetica, Arial, sans-serif;
+
+	font: normal 26px Amatic SC, Raleway, Helvetica, Arial, sans-serif;
 	text-shadow: 0 1px 0 #2F4C63;
 }
+
+h2{ font-size: 23px;}
+
+h3{ font-size: 21px;}
+
+
 p {
 	font-size: 14px;
 	line-height: 18px;
 }
 
-h1, h2, h3 {font-family: Amatic SC, Geogrotesque-semibold, Helvetica, Arial}
 
 /* --Clearfix */
 .cf:before,
@@ -182,7 +187,7 @@ h3.nav-header { width: 200px; margin: 0 0 10px; padding: 0 0 3px; font-size: 18p
 nav li {margin: 0 0 7px; font-size: 20px; }
 li.nav-sub2 { margin: 0 10px 7px;}
 nav li a:hover,
-nav li.active a  {border-bottom: 1px dotted #333; border-bottom: 1px dotted rgba(3,3,3,0.3); background: none; }
+nav li.active a  {border-bottom: 1px dotted #333; border-bottom: 1px dotted rgba(3,3,3,0.3); background: none; font-weight: 700;}
 nav li.active a  { cursor: default; }
 banner h1 { margin: 0 0 30px; font: normal 55px Amatic SC, Geogrotesque-regular, Helvetica, Arial, sans-serif; text-shadow: 0 1px 1px #333; color: #111; }
 
