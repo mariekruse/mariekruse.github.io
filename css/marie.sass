@@ -23,8 +23,7 @@ $font-size-header:     18px
 //Mixins
 @import "mixins"
 @import "helpers"
-
-//@import "reset"
+@import "reset"
 
 //styles
 body
@@ -33,10 +32,16 @@ body
   -webkit-font-smoothing: antialiased
   text-rendering: optimizeLegibility
   height: auto
- 
+
 p
   font-size: $font-size-body
   line-height: normal
+  margin-bottom: 5px
+
+a
+  color: $primary-color
+  text-decoration: none
+  border-bottom: 1px dotted
 
 h1
   +header
@@ -55,8 +60,16 @@ banner
     margin: 0 0 30px
     @include text-shadow(0, 1px, 1px, #333)
 
+header, .icon
+  a
+    border-bottom: none
+
+
 nav
   font: normal 400 $font-size-header*0.9 $font-stack-header
+
+  a
+    border-bottom: none
 
   li
     margin: 0 0 8px
@@ -72,6 +85,40 @@ nav
 
   li.active a
     cursor: default
+
+$icon-height: 210px
+$icon-width: 280px
+
+a.gallery-button
+  background-repeat: no-repeat
+  background-size: cover
+  height: $icon-height
+  width: $icon-width
+  display: block
+  float: left
+
+.flexslider#front-corousel
+  li
+    margin-right: 5px
+
+.icon
+  display: block
+  float: left
+  margin: 0px 5px 5px 0px
+  height: $icon-height+30px
+  width: $icon-width
+
+.loading:before
+  content: 'LOADING'
+  display: block
+  margin: 100px 0px 0px
+  text-align: center
+  color: $primary-color
+  font-weight: 700
+  font-size: 60px
+  opacity: 0.3
+  font-family: $font-stack-header
+
 
 /*
  Overriding flexslider.css

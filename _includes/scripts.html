@@ -8,15 +8,5 @@
 <script type="text/javascript">
   $(window).load(function(){
     $('#{{page.nav}}').addClass('active');
-    $('body').removeClass('loading');
-    $('.flexslider').flexslider({
-      animation: "slide",
-      controlNav: "thumbnails",
-      start: function(slider){
-        $('body').removeClass('loading');
-        $('section.slider').removeClass('loading');
-      }
-
-    });
   });
 </script>

@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   {%include head.html %}
 
-<body class="loading">
+<body>
 
   <div id="container" class="cf">
 
@@ -13,6 +13,19 @@
 	  <div id="main" role="main">
 		    <h1>{{page.title}}</h1>
 
+        <div class="flexslider corousel" id="front-corousel">
+           <ul class="slides">
+
+             {% for gallery in  page.galleries %}
+             <li><a class="gallery-button" id="{{gallery}}" href="/gallery/{{gallery}}/" style="background-image: url('/gallery/{{gallery}}/img1.jpg')">
+             </a></li>
+             {% endfor %}
+
+          </ul>
+        </div>
+
+        <div style="clear:both;" />
+
 		    {{ content }}
 
     </div>
@@ -20,5 +33,17 @@
   </div>
 
   {%include scripts.html%}
+  <script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        slideshow: false,
+        animationLoop: false,
+        controlNav: false,
+        itemWidth: 280,
+        itemMargin: 50,
+      });
+    });
+  </script>
 </body>
 </html>
